@@ -1,0 +1,22 @@
+{
+  "name": "exam-techplay",
+  "version": "1.0.0",
+  "description": "TECHPLAYの最終課題",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mitsuru53/prototype.git"
+  },
+  "author": "wai",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Mitsuru53/prototype/issues"
+  },
+  "homepage": "https://github.com/Mitsuru53/prototype#readme",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}
