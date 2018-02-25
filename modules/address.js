@@ -4,8 +4,8 @@ const getCity = address => {
   return cities[city_quantity];
 }
 
-const getCitiesArray = address => address.split('、')
+const getCitiesArray = address => address.split('、');
 
 const getCitiesQuantity = cities =>  Math.floor(Math.random() * cities.length);
 
-module.exports = { getCity: getCity };
+module.exports = {getCity: getCity};
