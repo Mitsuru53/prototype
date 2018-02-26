@@ -44,16 +44,21 @@
         if (data.code == 600) {
           alert(data.message)
           $('#button').text('Submit');
-          return
+          return;
         }
+
         // 通信成功時の処理を記述
         let restaurants = document.querySelector('#restaurants');
         let fragment = document.createDocumentFragment();
 
+        while (restaurants.firstChild) {
+          restaurants.removeChild(restaurants.firstChild);
+        }
+
         let firstRow = createRow();
         let secondRow = createRow();
         let thirdRow = createRow();
-        
+
         data.forEach((restaurant, index) => {
           if (index % 3 == 0) {
             let columnDiv = createColumns(restaurant);
@@ -71,7 +76,8 @@
         fragment.appendChild(firstRow);
         fragment.appendChild(secondRow);
         fragment.appendChild(thirdRow);
-        restaurants.appendChild(fragment)
+        restaurants.appendChild(fragment);
+        $('#button').text('Submit');
        })
       .fail(function() {
          // 通信失敗時の処理を記述
