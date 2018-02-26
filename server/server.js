@@ -45,6 +45,7 @@ app.get('/search', function (req, res) {
 			  if('error' in body){
 				  console.log("検索エラー" + JSON.stringify(body));
 				  callback(body.error, body);
+					return;
 			  }
 				let restaurants = body.rest;
 				restaurants.forEach(restaurant => {
